@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Social Media Usage Trends </title>
+
+  <link rel="stylesheet" href="styles/styles.css">
+
+  <!-- add the Highcharts script elements here -->
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+
+  <script src="https://code.highcharts.com/themes/dark-unica.js"></script>
+
+  <script src="js/themes/dark-unica.js"></script>
+
+  </head>
+  <body>
+
+  <h1>Social Media Usage Trends</h1>
+
+  <!-- add the div and the code BELOW this comment -->
+
+  <h3> by Destiny Arlotta </h3>
+
+
+<div id="container" style="min-width: 300px; height: 400px; margin: 0 auto"></div>
+
+
+<script>
+var chart = Highcharts.chart('container', {
+
+      chart: {
+        type: 'column'
+      },
+
+      title: {
+        text: 'U.S. Adults Using Social Media Platforms'
+      },
+
+      legend: {
+        align: 'right',
+        verticalAlign: 'middle',
+        layout: 'vertical'
+      },
+
+      xAxis: {
+        categories: ['Facebook', 'Instagram', 'Pinterest', 'Linkedin', 'Twitter'],
+        labels: {
+          x: -10
+        }
+      },
+
+      yAxis: {
+        allowDecimals: false,
+        title: {
+          text: 'Percentage'
+        }
+      },
+
+      series: [{
+          name: 'Ages 18-29',
+          data: [88, 59, 36, 34, 36]
+        }, {
+          name: 'Ages 30-49',
+          data: [79, 31, 32, 31, 22]
+        }, {
+          name: 'Ages 50-64',
+          data: [61, 13, 24, 21, 18]
+        }, {
+          name: 'Ages 65+',
+          data: [36, 5, 9, 11, 6]
+
+          }],
+
+        responsive: {
+          rules: [{
+            condition: {
+              maxWidth: 300
+            },
+            chartOptions: {
+              legend: {
+                align: 'center',
+                verticalAlign: 'bottom',
+                layout: 'horizontal'
+              },
+              yAxis: {
+                labels: {
+                  align: 'left',
+                  x: 0,
+                  y: -5
+                },
+                title: {
+                  text: null
+                }
+              },
+              subtitle: {
+                text: null
+              },
+              credits: {
+                enabled: false
+              }
+            }
+          }]
+        }
+      });
+
+    $('#small').click(function() {
+      chart.setSize(400, 300);
+    });
+
+    $('#large').click(function() {
+      chart.setSize(600, 300);
+    });
+
+</script>
+<a href="http://www.pewinternet.org/fact-sheet/social-media/"> Data was collected from Pew Research Center.</a>
+<p> Facebook continues to dominate the social media market as the most highly used platform for all American age groups. 88% of people aged 18-29, and 79% of 30-49 year olds use Facebook. The sole listed social media site that stands competition is Instagram, with 59% of 18-29 year olds utilizing their platform. One may believe that Instagram's rise in usage is troublesome news to Facebook, however, Instagram is owned by Facebook and is therefore a partner not a threat. </p>
+  <p>
+Overall, the age group utilizing the given social media tools most often are the 18-29 year olds. Pinterest, LinkedIn, and Twitter have similar statistics, each with the younger demographic being their highest users, and having roughly 10% of 65+ users.</p>
+
+
+
+
+<div id="container5" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+<script>
+Highcharts.chart('container5', {
+    chart: {
+        type: 'areaspline'
+    },
+    title: {
+        text: 'Percentage of Site Users who View News on the Site'
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'left',
+        verticalAlign: 'top',
+        x: 150,
+        y: 100,
+        floating: true,
+        borderWidth: 1,
+        backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+    },
+    xAxis: {
+        categories: [
+            'Facebook',
+            'YouTube',
+            'Twitter',
+            'Instagram',
+            'LinkedIn',
+            'Reddit'
+        ],
+        plotBands: [{ // visualize the weekend
+            from: 4.5,
+            to: 6.5,
+            color: 'rgba(0, 0, 0, 0)'
+        }]
+    },
+    yAxis: {
+        title: {
+            text: 'Percentage'
+        }
+    },
+    tooltip: {
+        shared: true,
+        valueSuffix: '%'
+    },
+    credits: {
+        enabled: false
+    },
+    plotOptions: {
+        areaspline: {
+            fillOpacity: 0.3
+        }
+    },
+    series: [{
+        name: '2013',
+        data: [47, 20, 52, 13, 13, 62]
+    }, {
+        name: '2016',
+        data: [66, 21, 59, 23, 19, 70]
+    }]
+});
+</script>
+<a href="http://www.journalism.org/2016/05/26/social-media-and-news-2016-appendix-a-2013-and-2016-trends/"> Data was collected from Pew Research Center.</a>
+
+<p>Since 2013, social media sites have become more popular platforms for receiving news. Reddit had 62% of their site users seek news on the site in 2013. In 2016, that percentage increased to 70. Facebook's users who view news on the site increased from 47% to 66%. The trend was least influential for YouTube users, as the difference was only 1%. One of the largest increases in usage of the site for news coverage was Instagram. With a jump from 13% in 2013 to 23% in 2016, Instagram users are finding the photo site to be a source for news.
+</p>
+
+  <!-- don't write anything below these required tags -->
+  </body>
+  </html>
